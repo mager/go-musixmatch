@@ -1,3 +1,3 @@
-module github.com/milindmadhukar/go-musixmatch
+module github.com/mager/go-musixmatch
 
 go 1.16

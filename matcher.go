@@ -3,14 +3,15 @@ package gomusixmatch
 import (
 	"context"
 
-	mxmParams "github.com/milindmadhukar/go-musixmatch/params"
+	mxmParams "github.com/mager/go-musixmatch/params"
 )
 
 // Get the lyrics for track based on title and artist
 //
 // Parameters:
-//     QueryTrack  - The song title
-//     QueryArtist - The song artist
+//
+//	QueryTrack  - The song title
+//	QueryArtist - The song artist
 func (client *Client) GetMatcherLyrics(ctx context.Context, params ...mxmParams.Param) (*Lyrics, error) {
 
 	var lyricsData lyrics
@@ -31,9 +32,10 @@ func (client *Client) GetMatcherLyrics(ctx context.Context, params ...mxmParams.
 // maybe try again using artist aliases, and so on.
 //
 // Parameters:
-//     QueryTrack  - The song title
-//     QueryArtist - The song artist
-//     QueryAlbum  - The song album
+//
+//	QueryTrack  - The song title
+//	QueryArtist - The song artist
+//	QueryAlbum  - The song album
 func (client *Client) GetMatcherTrack(ctx context.Context, params ...mxmParams.Param) (*Track, error) {
 	var trackData track
 	err := client.get(ctx, "matcher.track.get", &trackData, params...)

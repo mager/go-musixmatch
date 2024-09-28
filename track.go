@@ -3,7 +3,7 @@ package gomusixmatch
 import (
 	"context"
 
-	mxmParams "github.com/milindmadhukar/go-musixmatch/params"
+	mxmParams "github.com/mager/go-musixmatch/params"
 )
 
 /*
@@ -44,9 +44,9 @@ func (client *Client) SearchTrack(ctx context.Context, params ...mxmParams.Param
 
 	var tracks []*Track
 
-  for i := 0; i < len(trackData.TrackList); i++ {
-    tracks = append(tracks, &trackData.TrackList[i].TrackData)
-  }
+	for i := 0; i < len(trackData.TrackList); i++ {
+		tracks = append(tracks, &trackData.TrackList[i].TrackData)
+	}
 
 	return tracks, nil
 }
@@ -93,9 +93,24 @@ func (client *Client) GetTrackLyrics(ctx context.Context, params ...mxmParams.Pa
 
 }
 
-// func (client *Client) GetTrackLyricsMood (ctx context.Context, params ...musixmatchParams.Param) () {
-//
-// }
+/*
+Get the lyrics mood info Musixmatch's database.
+
+Parameters:
+
+	TrackID - The musixmatch track id
+*/
+func (client *Client) GetTrackLyricsMood(ctx context.Context, params ...mxmParams.Param) (*TrackMood, error) {
+	var trackMoodData trackMood
+
+	err := client.get(ctx, "track.lyrics.mood.get", &trackMoodData, params...)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return &trackMoodData.TrackMoodData, nil
+}
 
 /*
 Get the snippet for a given track.

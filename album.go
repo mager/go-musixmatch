@@ -3,7 +3,7 @@ package gomusixmatch
 import (
 	"context"
 
-	mxmParams "github.com/milindmadhukar/go-musixmatch/params"
+	mxmParams "github.com/mager/go-musixmatch/params"
 )
 
 /*
@@ -48,9 +48,9 @@ func (client *Client) GetAlbumTracks(ctx context.Context, params ...mxmParams.Pa
 
 	var tracks []*Track
 
-  for i := 0; i < len(tracksData.TrackList); i++ {
-    tracks = append(tracks, &tracksData.TrackList[i].TrackData)
-  }
+	for i := 0; i < len(tracksData.TrackList); i++ {
+		tracks = append(tracks, &tracksData.TrackList[i].TrackData)
+	}
 
 	return tracks, nil
 

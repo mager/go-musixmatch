@@ -42,7 +42,7 @@ import (
 	"net/http"
 
 	mxm "github.com/milindmadhukar/go-musixmatch"
-	"github.com/milindmadhukar/go-musixmatch/params"
+	"github.com/mager/go-musixmatch/params"
 )
 
 func main() {

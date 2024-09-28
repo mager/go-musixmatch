@@ -3,7 +3,7 @@ package gomusixmatch
 import (
 	"context"
 
-	mxmParams "github.com/milindmadhukar/go-musixmatch/params"
+	mxmParams "github.com/mager/go-musixmatch/params"
 )
 
 /*
@@ -50,12 +50,11 @@ func (client *Client) SearchArtist(ctx context.Context, params ...mxmParams.Para
 
 	var artists []*Artist
 
-  artistList := artistsData.ArtistList
+	artistList := artistsData.ArtistList
 
 	for i := 0; i < len(artistList); i++ {
-    artists = append(artists, &artistList[i].ArtistData)
+		artists = append(artists, &artistList[i].ArtistData)
 	}
-
 
 	return artists, nil
 
@@ -85,9 +84,9 @@ func (client *Client) GetArtistAlbums(ctx context.Context, params ...mxmParams.P
 
 	var albums []*Album
 
-  for i := 0; i < len(albumsData.AlbumList); i++ {
-    albums = append(albums, &albumsData.AlbumList[i].AlbumData)
-  }
+	for i := 0; i < len(albumsData.AlbumList); i++ {
+		albums = append(albums, &albumsData.AlbumList[i].AlbumData)
+	}
 
 	return albums, nil
 

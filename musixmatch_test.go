@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"testing"
 
-	musixmatch "github.com/milindmadhukar/go-musixmatch"
-	"github.com/milindmadhukar/go-musixmatch/params"
+	musixmatch "github.com/mager/go-musixmatch"
+	"github.com/mager/go-musixmatch/params"
 )
 
 var client = musixmatch.New(musixmatch.GetApiKeyFromEnvFile(".env"), http.DefaultClient)

@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"net/http"
 
-	mxmParams "github.com/milindmadhukar/go-musixmatch/params"
+	mxmParams "github.com/mager/go-musixmatch/params"
 )
 
 // Musixmatch request client that holds the API key and the http client.
@@ -34,13 +34,12 @@ func (client *Client) get(ctx context.Context, endpoint string, response interfa
 		endpoint,
 		client.ApiKey)
 
-
 	url, err := processParams(url, params...)
 	if err != nil {
 		return err
 	}
 
-  // fmt.Println(url)
+	// fmt.Println(url)
 
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
 	if err != nil {

@@ -303,10 +303,11 @@ func FilterBySubtitleLengthMaxDeviation(f_subtitle_length_max_deviation time.Dur
 
 // Filter objects from a particular chart.
 // Select among available charts:
-//     top           : editorial chart
-//     hot           : Most viewed lyrics in the last 2 hours
-//     mxmweekly     : Most viewed lyrics in the last 7 days
-//     mxmweekly_new : Most viewed lyrics in the last 7 days limited to new releases only
+//
+//	top           : editorial chart
+//	hot           : Most viewed lyrics in the last 2 hours
+//	mxmweekly     : Most viewed lyrics in the last 7 days
+//	mxmweekly_new : Most viewed lyrics in the last 7 days limited to new releases only
 func ChartName(chartName string) Param {
 
 	var err error

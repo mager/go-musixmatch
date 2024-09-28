@@ -3,7 +3,7 @@ package gomusixmatch
 import (
 	"context"
 
-	mxmParams "github.com/milindmadhukar/go-musixmatch/params"
+	mxmParams "github.com/mager/go-musixmatch/params"
 )
 
 /*

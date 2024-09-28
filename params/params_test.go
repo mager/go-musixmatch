@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	p "github.com/milindmadhukar/go-musixmatch/params"
+	p "github.com/mager/go-musixmatch/params"
 )
 
 func assert(expected, got interface{}, t *testing.T) {

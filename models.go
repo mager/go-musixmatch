@@ -149,6 +149,13 @@ type Album struct {
 	} `json:"external_ids"`
 }
 
+type TrackMood struct {
+	MoodList []struct {
+		Label string `json:"label"`
+		Value string `json:"value"`
+	} `json:"mood_list"`
+}
+
 // HACK: I don't like the way JSON is being parsed by these not so useful structs. I also want to provide the end user withe request URL.
 
 type album struct {
@@ -193,4 +200,8 @@ type lyrics struct {
 
 type snippet struct {
 	SnippetData Snippet `json:"snippet"`
+}
+
+type trackMood struct {
+	TrackMoodData TrackMood `json:"mood_list"`
 }

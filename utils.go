@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	mxmParams "github.com/milindmadhukar/go-musixmatch/params"
+	mxmParams "github.com/mager/go-musixmatch/params"
 )
 
 func processParams(musixMatchUrl string, params ...mxmParams.Param) (string, error) {
